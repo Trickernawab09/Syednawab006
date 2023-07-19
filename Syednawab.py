@@ -132,7 +132,7 @@ def sendtextconvo(comment):
         print("\033[1;32;40m", end="")
         print(e.strftime("%d/%m/%Y   %I:%M:%S %p"))
         print(">>", line, "\n")
-    except ConnectionError:
+    except urllib.error.URLError:
         print("Net chud gya bsdk...")
         sleep(5)
 
